@@ -37,15 +37,83 @@
             Main Menu
         </p>
 
-        <!-- Dashboard -->
-        <a href="#"
-            class="nav-item group flex items-center gap-3 rounded-lg bg-slate-100 px-3 py-2.5 text-[13px] font-semibold text-slate-900">
-            <svg class="h-[17px] w-[17px] shrink-0 text-slate-700" viewBox="0 0 24 24" fill="none"
-                stroke="currentColor" stroke-width="1.8">
-                <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1V10Z" />
-            </svg>
-            <span class="sidebar-label">Dashboard</span>
-        </a>
+       
+<!-- Dashboard -->
+<a href="#"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="7" height="7" rx="1" />
+        <rect x="14" y="3" width="7" height="7" rx="1" />
+        <rect x="3" y="14" width="7" height="7" rx="1" />
+        <rect x="14" y="14" width="7" height="7" rx="1" />
+    </svg>
+    <span class="sidebar-label">Dashboard</span>
+</a>
+
+<!-- Purchase -->
+<a href="{{ route('purchase-orders.index') }}"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8">
+        <path d="M3 7h18l-2 13H5L3 7Z" />
+        <path d="M8 7a4 4 0 0 1 8 0M9 11v4m6-4v4" />
+    </svg>
+    <span class="sidebar-label">Purchase</span>
+</a>
+
+<!-- Grouping Workflow -->
+<a href="{{ route('workflow-groups.index') }}"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="7" height="5" rx="1" />
+        <rect x="14" y="16" width="7" height="5" rx="1" />
+        <rect x="3" y="16" width="7" height="5" rx="1" />
+        <path d="M6.5 8v4h11v4M17.5 12h-11v4" />
+    </svg>
+    <span class="sidebar-label">Grouping Workflow</span>
+</a>
+
+
+
+<!-- Workflow Management -->
+<a href="{{ route('workflows.index') }}"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24"
+        fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="7" height="5" rx="1" />
+        <rect x="14" y="16" width="7" height="5" rx="1" />
+        <rect x="3" y="16" width="7" height="5" rx="1" />
+        <path d="M6.5 8v4h11v4M17.5 12h-11v4" />
+    </svg>
+    <span class="sidebar-label">Workflow Management</span>
+</a>
+
+
+
+<!-- Setting Tabel -->
+<a href="{{ route('r-tables.index') }}"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8">
+        <ellipse cx="12" cy="5" rx="8.5" ry="3" />
+        <path d="M3.5 5v14c0 1.66 3.81 3 8.5 3s8.5-1.34 8.5-3V5" />
+        <path d="M3.5 12c0 1.66 3.81 3 8.5 3s8.5-1.34 8.5-3" />
+    </svg>
+    <span class="sidebar-label">Setting Tabel</span>
+</a>
+
+<!-- Setting Field -->
+<a href="{{ route('r-fields.index') }}"
+    class="nav-item group flex items-center gap-3 rounded-lg px-3 py-2.5 text-[13px] font-semibold text-slate-700 hover:bg-slate-100 hover:text-slate-900">
+    <svg class="h-[17px] w-[17px] shrink-0" viewBox="0 0 24 24" fill="none"
+        stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="18" height="18" rx="2" />
+        <path d="M3 9h18M9 9v12M15 9v12" />
+    </svg>
+    <span class="sidebar-label">Setting Field</span>
+</a>
 
         <!-- 1. Purchase Order (PO) -->
         <div class="mt-1">
