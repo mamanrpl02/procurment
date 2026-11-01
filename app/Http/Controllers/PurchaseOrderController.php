@@ -43,6 +43,7 @@ class PurchaseOrderController extends Controller
     }
 
     
+
 public function store(Request $request, WorkflowEngine $workflowEngine)
 {
     $validated = $request->validate([
@@ -64,6 +65,11 @@ public function store(Request $request, WorkflowEngine $workflowEngine)
             'add'
         );
 
+        // Jika workflow tidak mengisi status, gunakan Draft.
+        if (empty($attributes['status'])) {
+            $attributes['status'] = 'Draft';
+        }
+
         // Simpan hasil yang sudah diproses workflow.
         $purchaseOrder = PurchaseOrder::create($attributes);
 
@@ -83,6 +89,7 @@ public function store(Request $request, WorkflowEngine $workflowEngine)
         ->route('purchase-orders.index')
         ->with('success', 'Tiket PO berhasil dibuat.');
 }
+
 
 
     public function show(PurchaseOrder $purchaseOrder)
